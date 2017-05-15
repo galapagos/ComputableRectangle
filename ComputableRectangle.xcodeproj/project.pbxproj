@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9F60D8A01EC99CCD009D09B1 /* ComputableRectangle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F60D8961EC99CCD009D09B1 /* ComputableRectangle.framework */; };
-		9F60D8A51EC99CCD009D09B1 /* ComputableRectangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D8A41EC99CCD009D09B1 /* ComputableRectangleTests.swift */; };
-		9F60D8A71EC99CCD009D09B1 /* ComputableRectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F60D8991EC99CCD009D09B1 /* ComputableRectangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F60D8B11EC99D06009D09B1 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D8B01EC99D06009D09B1 /* CGRect.swift */; };
+		9F60D8B31EC99E04009D09B1 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D8B21EC99E04009D09B1 /* CGRectTests.swift */; };
+		9FE502311EC9A0BA0037028C /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE502301EC9A0BA0037028C /* CGSize.swift */; };
+		9FE502331EC9A1470037028C /* CGSizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE502321EC9A1470037028C /* CGSizeTests.swift */; };
+		9FE502351EC9A1E80037028C /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE502341EC9A1E80037028C /* CGPoint.swift */; };
+		9FE502371EC9A2650037028C /* CGPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE502361EC9A2650037028C /* CGPointTests.swift */; };
+		9FE502391EC9A35E0037028C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9FE502381EC9A35E0037028C /* README.md */; };
+		9FE5023B1EC9A3660037028C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9FE5023A1EC9A3660037028C /* LICENSE */; };
+		9FE5023D1EC9A5E10037028C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9FE5023C1EC9A5E10037028C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +31,18 @@
 
 /* Begin PBXFileReference section */
 		9F60D8961EC99CCD009D09B1 /* ComputableRectangle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComputableRectangle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F60D8991EC99CCD009D09B1 /* ComputableRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComputableRectangle.h; sourceTree = "<group>"; };
 		9F60D89A1EC99CCD009D09B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F60D89F1EC99CCD009D09B1 /* ComputableRectangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComputableRectangleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F60D8A41EC99CCD009D09B1 /* ComputableRectangleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputableRectangleTests.swift; sourceTree = "<group>"; };
 		9F60D8A61EC99CCD009D09B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F60D8B01EC99D06009D09B1 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		9F60D8B21EC99E04009D09B1 /* CGRectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectTests.swift; sourceTree = "<group>"; };
+		9FE502301EC9A0BA0037028C /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		9FE502321EC9A1470037028C /* CGSizeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeTests.swift; sourceTree = "<group>"; };
+		9FE502341EC9A1E80037028C /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		9FE502361EC9A2650037028C /* CGPointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointTests.swift; sourceTree = "<group>"; };
+		9FE502381EC9A35E0037028C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9FE5023A1EC9A3660037028C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9FE5023C1EC9A5E10037028C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 				9F60D8981EC99CCD009D09B1 /* ComputableRectangle */,
 				9F60D8A31EC99CCD009D09B1 /* ComputableRectangleTests */,
 				9F60D8971EC99CCD009D09B1 /* Products */,
+				9FE5023C1EC9A5E10037028C /* .gitignore */,
+				9FE5023A1EC9A3660037028C /* LICENSE */,
+				9FE502381EC9A35E0037028C /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +88,9 @@
 		9F60D8981EC99CCD009D09B1 /* ComputableRectangle */ = {
 			isa = PBXGroup;
 			children = (
-				9F60D8991EC99CCD009D09B1 /* ComputableRectangle.h */,
+				9FE502341EC9A1E80037028C /* CGPoint.swift */,
+				9F60D8B01EC99D06009D09B1 /* CGRect.swift */,
+				9FE502301EC9A0BA0037028C /* CGSize.swift */,
 				9F60D89A1EC99CCD009D09B1 /* Info.plist */,
 			);
 			path = ComputableRectangle;
@@ -80,7 +99,9 @@
 		9F60D8A31EC99CCD009D09B1 /* ComputableRectangleTests */ = {
 			isa = PBXGroup;
 			children = (
-				9F60D8A41EC99CCD009D09B1 /* ComputableRectangleTests.swift */,
+				9FE502361EC9A2650037028C /* CGPointTests.swift */,
+				9F60D8B21EC99E04009D09B1 /* CGRectTests.swift */,
+				9FE502321EC9A1470037028C /* CGSizeTests.swift */,
 				9F60D8A61EC99CCD009D09B1 /* Info.plist */,
 			);
 			path = ComputableRectangleTests;
@@ -93,7 +114,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F60D8A71EC99CCD009D09B1 /* ComputableRectangle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					9F60D8951EC99CCD009D09B1 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					9F60D89E1EC99CCD009D09B1 = {
@@ -179,6 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE5023D1EC9A5E10037028C /* .gitignore in Resources */,
+				9FE5023B1EC9A3660037028C /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE502311EC9A0BA0037028C /* CGSize.swift in Sources */,
+				9FE502351EC9A1E80037028C /* CGPoint.swift in Sources */,
+				9FE502391EC9A35E0037028C /* README.md in Sources */,
+				9F60D8B11EC99D06009D09B1 /* CGRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F60D8A51EC99CCD009D09B1 /* ComputableRectangleTests.swift in Sources */,
+				9FE502331EC9A1470037028C /* CGSizeTests.swift in Sources */,
+				9FE502371EC9A2650037028C /* CGPointTests.swift in Sources */,
+				9F60D8B31EC99E04009D09B1 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +351,7 @@
 		9F60D8AB1EC99CCD009D09B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -333,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "k-motoyan.ComputableRectangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,6 +371,7 @@
 		9F60D8AC1EC99CCD009D09B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -358,6 +390,7 @@
 		9F60D8AE1EC99CCD009D09B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ComputableRectangleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "k-motoyan.ComputableRectangleTests";
@@ -369,6 +402,7 @@
 		9F60D8AF1EC99CCD009D09B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ComputableRectangleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "k-motoyan.ComputableRectangleTests";
@@ -396,6 +430,7 @@
 				9F60D8AC1EC99CCD009D09B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F60D8AD1EC99CCD009D09B1 /* Build configuration list for PBXNativeTarget "ComputableRectangleTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +439,7 @@
 				9F60D8AF1EC99CCD009D09B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
