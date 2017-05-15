@@ -1,21 +1,17 @@
 import CoreGraphics
 
-public extension CGPoint {
+public func + (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
+    return CGPoint(x: lhs.x + rhs, y: lhs.y + rhs)
+}
 
-    static func + (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-        return CGPoint(x: lhs.x + rhs, y: lhs.y + rhs)
-    }
+public func - (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
+    return CGPoint(x: lhs.x - rhs, y: lhs.y - rhs)
+}
 
-    static func - (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-        return CGPoint(x: lhs.x - rhs, y: lhs.y - rhs)
-    }
+public func * (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
+    return CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
+}
 
-    static func * (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-        return CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
-    }
-
-    static func / (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-        return CGPoint(x: lhs.x / rhs, y: lhs.y / rhs)
-    }
-
+public func / (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
+    return CGPoint(x: lhs.x / rhs, y: lhs.y / rhs)
 }
