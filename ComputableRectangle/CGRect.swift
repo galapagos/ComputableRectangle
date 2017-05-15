@@ -47,3 +47,21 @@ public func * (lhs: CGRect, rhs: CGPoint) -> CGRect {
 public func / (lhs: CGRect, rhs: CGPoint) -> CGRect {
     return CGRect(origin: lhs.origin / rhs, size: lhs.size)
 }
+
+// MARK: - assign CGSize.
+
+public func + (lhs: CGRect, rhs: CGSize) -> CGRect {
+    return CGRect(origin: lhs.origin, size: lhs.size + rhs)
+}
+
+public func - (lhs: CGRect, rhs: CGSize) -> CGRect {
+    return CGRect(origin: lhs.origin, size: lhs.size - rhs)
+}
+
+public func * (lhs: CGRect, rhs: CGSize) -> CGRect {
+    return CGRect(origin: lhs.origin, size: lhs.size * rhs)
+}
+
+public func / (lhs: CGRect, rhs: CGSize) -> CGRect {
+    return CGRect(origin: lhs.origin, size: lhs.size / rhs)
+}

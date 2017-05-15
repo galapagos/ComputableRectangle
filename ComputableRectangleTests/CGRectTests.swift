@@ -53,4 +53,28 @@ final class CGRectTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToCGSize() {
+        let expect = CGRect(x: 1, y: 1, width: 2, height: 3)
+        let actual = baseRect + CGSize(width: 1, height: 2)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToCGSize() {
+        let expect = CGRect(x: 1, y: 1, width: 0, height: -1)
+        let actual = baseRect - CGSize(width: 1, height: 2)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToCGSize() {
+        let expect = CGRect(x: 1, y: 1, width: 5, height: 10)
+        let actual = baseRect * CGSize(width: 5, height: 10)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToCGSize() {
+        let expect = CGRect(x: 1, y: 1, width: 0.5, height: 0.25)
+        let actual = baseRect / CGSize(width: 2, height: 4)
+        XCTAssertEqual(expect, actual)
+    }
+
 }
