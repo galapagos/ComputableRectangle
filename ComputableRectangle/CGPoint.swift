@@ -1,21 +1,25 @@
 import CoreGraphics
 
-// MARK: - assign CGFloat.
+// MARK: - assign CGFloatConvertible.
 
-public func + (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-    return CGPoint(x: lhs.x + rhs, y: lhs.y + rhs)
+public func + (lhs: CGPoint, rhs: CGFloatConvertible) -> CGPoint {
+    let cgfloat = rhs.CGFloatValue
+    return CGPoint(x: lhs.x + cgfloat, y: lhs.y + cgfloat)
 }
 
-public func - (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-    return CGPoint(x: lhs.x - rhs, y: lhs.y - rhs)
+public func - (lhs: CGPoint, rhs: CGFloatConvertible) -> CGPoint {
+    let cgfloat = rhs.CGFloatValue
+    return CGPoint(x: lhs.x - cgfloat, y: lhs.y - cgfloat)
 }
 
-public func * (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-    return CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
+public func * (lhs: CGPoint, rhs: CGFloatConvertible) -> CGPoint {
+    let cgfloat = rhs.CGFloatValue
+    return CGPoint(x: lhs.x * cgfloat, y: lhs.y * cgfloat)
 }
 
-public func / (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
-    return CGPoint(x: lhs.x / rhs, y: lhs.y / rhs)
+public func / (lhs: CGPoint, rhs: CGFloatConvertible) -> CGPoint {
+    let cgfloat = rhs.CGFloatValue
+    return CGPoint(x: lhs.x / cgfloat, y: lhs.y / cgfloat)
 }
 
 // MARK: - assign CGPoint.

@@ -1,33 +1,41 @@
 import CoreGraphics
 
-// MARK: - assign CGFloat.
+// MARK: - assign CGFloatConvertible.
 
-public func + (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX + rhs,
-                  y: lhs.minY + rhs,
-                  width: lhs.width + rhs,
-                  height: lhs.height + rhs)
+public func + (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX + cgfloat,
+                  y: lhs.minY + cgfloat,
+                  width: lhs.width + cgfloat,
+                  height: lhs.height + cgfloat)
 }
 
-public func - (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX - rhs,
-                  y: lhs.minY - rhs,
-                  width: lhs.width - rhs,
-                  height: lhs.height - rhs)
+public func - (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX - cgfloat,
+                  y: lhs.minY - cgfloat,
+                  width: lhs.width - cgfloat,
+                  height: lhs.height - cgfloat)
 }
 
-public func * (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX * rhs,
-                  y: lhs.minY * rhs,
-                  width: lhs.width * rhs,
-                  height: lhs.height * rhs)
+public func * (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX * cgfloat,
+                  y: lhs.minY * cgfloat,
+                  width: lhs.width * cgfloat,
+                  height: lhs.height * cgfloat)
 }
 
-public func / (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX / rhs,
-                  y: lhs.minY / rhs,
-                  width: lhs.width / rhs,
-                  height: lhs.height / rhs)
+public func / (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX / cgfloat,
+                  y: lhs.minY / cgfloat,
+                  width: lhs.width / cgfloat,
+                  height: lhs.height / cgfloat)
 }
 
 // MARK: - assign CGPoint.
