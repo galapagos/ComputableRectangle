@@ -18,6 +18,8 @@
 		9FE5023B1EC9A3660037028C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9FE5023A1EC9A3660037028C /* LICENSE */; };
 		9FE5023D1EC9A5E10037028C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9FE5023C1EC9A5E10037028C /* .gitignore */; };
 		9FF20FDA1EC9C35800171915 /* AssignableTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF20FD91EC9C35800171915 /* AssignableTypes.swift */; };
+		9FF20FDC1ECA840100171915 /* CGFloatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF20FDB1ECA840100171915 /* CGFloatConvertible.swift */; };
+		9FF20FDE1ECA87B100171915 /* CGFloatConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF20FDD1ECA87B100171915 /* CGFloatConvertibleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		9FE5023A1EC9A3660037028C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9FE5023C1EC9A5E10037028C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9FF20FD91EC9C35800171915 /* AssignableTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignableTypes.swift; sourceTree = "<group>"; };
+		9FF20FDB1ECA840100171915 /* CGFloatConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatConvertible.swift; sourceTree = "<group>"; };
+		9FF20FDD1ECA87B100171915 /* CGFloatConvertibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatConvertibleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF20FD91EC9C35800171915 /* AssignableTypes.swift */,
+				9FF20FDB1ECA840100171915 /* CGFloatConvertible.swift */,
 				9FE502341EC9A1E80037028C /* CGPoint.swift */,
 				9F60D8B01EC99D06009D09B1 /* CGRect.swift */,
 				9FE502301EC9A0BA0037028C /* CGSize.swift */,
@@ -102,6 +107,7 @@
 		9F60D8A31EC99CCD009D09B1 /* ComputableRectangleTests */ = {
 			isa = PBXGroup;
 			children = (
+				9FF20FDD1ECA87B100171915 /* CGFloatConvertibleTests.swift */,
 				9FE502361EC9A2650037028C /* CGPointTests.swift */,
 				9F60D8B21EC99E04009D09B1 /* CGRectTests.swift */,
 				9FE502321EC9A1470037028C /* CGSizeTests.swift */,
@@ -224,6 +230,7 @@
 			files = (
 				9FE502311EC9A0BA0037028C /* CGSize.swift in Sources */,
 				9FE502351EC9A1E80037028C /* CGPoint.swift in Sources */,
+				9FF20FDC1ECA840100171915 /* CGFloatConvertible.swift in Sources */,
 				9FE502391EC9A35E0037028C /* README.md in Sources */,
 				9F60D8B11EC99D06009D09B1 /* CGRect.swift in Sources */,
 				9FF20FDA1EC9C35800171915 /* AssignableTypes.swift in Sources */,
@@ -234,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF20FDE1ECA87B100171915 /* CGFloatConvertibleTests.swift in Sources */,
 				9FE502331EC9A1470037028C /* CGSizeTests.swift in Sources */,
 				9FE502371EC9A2650037028C /* CGPointTests.swift in Sources */,
 				9F60D8B31EC99E04009D09B1 /* CGRectTests.swift in Sources */,
