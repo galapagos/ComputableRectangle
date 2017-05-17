@@ -125,4 +125,28 @@ final class CGRectTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToOriginY() {
+        let expect = CGRect(x: 1, y: 2, width: 1, height: 1)
+        let actual = baseRect + OriginY(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToOriginY() {
+        let expect = CGRect(x: 1, y: 0, width: 1, height: 1)
+        let actual = baseRect - OriginY(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToOriginY() {
+        let expect = CGRect(x: 1, y: 5, width: 1, height: 1)
+        let actual = baseRect * OriginY(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToOriginY() {
+        let expect = CGRect(x: 1, y: 0.5, width: 1, height: 1)
+        let actual = baseRect / OriginY(2)
+        XCTAssertEqual(expect, actual)
+    }
+
 }
