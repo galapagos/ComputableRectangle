@@ -57,3 +57,21 @@ public func * (lhs: CGPoint, rhs: OriginX) -> CGPoint {
 public func / (lhs: CGPoint, rhs: OriginX) -> CGPoint {
     return CGPoint(x: lhs.x / rhs.value, y: lhs.y)
 }
+
+// MARK: - point assing to `y`.
+
+public func + (lhs: CGPoint, rhs: OriginY) -> CGPoint {
+    return CGPoint(x: lhs.x, y: lhs.y + rhs.value)
+}
+
+public func - (lhs: CGPoint, rhs: OriginY) -> CGPoint {
+    return CGPoint(x: lhs.x, y: lhs.y - rhs.value)
+}
+
+public func * (lhs: CGPoint, rhs: OriginY) -> CGPoint {
+    return CGPoint(x: lhs.x, y: lhs.y * rhs.value)
+}
+
+public func / (lhs: CGPoint, rhs: OriginY) -> CGPoint {
+    return CGPoint(x: lhs.x, y: lhs.y / rhs.value)
+}
