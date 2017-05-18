@@ -53,4 +53,28 @@ final class CGSizeTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToWidth() {
+        let expect = CGSize(width: 2, height: 1)
+        let actual = baseSize + SizeOfWidth(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToWidth() {
+        let expect = CGSize(width: 0, height: 1)
+        let actual = baseSize - SizeOfWidth(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToWidth() {
+        let expect = CGSize(width: 5, height: 1)
+        let actual = baseSize * SizeOfWidth(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToWidth() {
+        let expect = CGSize(width: 0.5, height: 1)
+        let actual = baseSize / SizeOfWidth(2)
+        XCTAssertEqual(expect, actual)
+    }
+
 }

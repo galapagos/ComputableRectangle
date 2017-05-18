@@ -127,3 +127,21 @@ public func * (lhs: CGRect, rhs: OriginY) -> CGRect {
 public func / (lhs: CGRect, rhs: OriginY) -> CGRect {
     return CGRect(x: lhs.minX, y: lhs.minY / rhs.value, width: lhs.width, height: lhs.height)
 }
+
+// MARK: - point assing to `size.width`.
+
+public func + (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width + rhs.value, height: lhs.height)
+}
+
+public func - (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width - rhs.value, height: lhs.height)
+}
+
+public func * (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width * rhs.value, height: lhs.height)
+}
+
+public func / (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width / rhs.value, height: lhs.height)
+}

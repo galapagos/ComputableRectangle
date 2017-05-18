@@ -149,4 +149,28 @@ final class CGRectTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 2, height: 1)
+        let actual = baseRect + SizeOfWidth(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 0, height: 1)
+        let actual = baseRect - SizeOfWidth(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 5, height: 1)
+        let actual = baseRect * SizeOfWidth(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 0.5, height: 1)
+        let actual = baseRect / SizeOfWidth(2)
+        XCTAssertEqual(expect, actual)
+    }
+
 }
