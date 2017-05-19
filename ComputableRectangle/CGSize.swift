@@ -57,3 +57,21 @@ public func * (lhs: CGSize, rhs: SizeOfWidth) -> CGSize {
 public func / (lhs: CGSize, rhs: SizeOfWidth) -> CGSize {
     return CGSize(width: lhs.width / rhs.value, height: lhs.height)
 }
+
+// MARK: - point assing to `height`.
+
+public func + (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height + rhs.value)
+}
+
+public func - (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height - rhs.value)
+}
+
+public func * (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height * rhs.value)
+}
+
+public func / (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height / rhs.value)
+}
