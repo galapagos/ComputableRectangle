@@ -77,4 +77,28 @@ final class CGSizeTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToHeight() {
+        let expect = CGSize(width: 1, height: 2)
+        let actual = baseSize + SizeOfHeight(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToHeight() {
+        let expect = CGSize(width: 1, height: 0)
+        let actual = baseSize - SizeOfHeight(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToHeight() {
+        let expect = CGSize(width: 1, height: 5)
+        let actual = baseSize * SizeOfHeight(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToHeight() {
+        let expect = CGSize(width: 1, height: 0.5)
+        let actual = baseSize / SizeOfHeight(2)
+        XCTAssertEqual(expect, actual)
+    }
+
 }
