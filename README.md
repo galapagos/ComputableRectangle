@@ -14,68 +14,60 @@ github "galapagos/ComputableRectangle"
 
 ## Usage
 
+### Calculating scalar value
+
+It is possible to calculate scalar values `CGRect`, `CGPoint`, `CGSize`.
+
+As a result, the calculation result is applied to all properties.
+
+※ A scalar value refers to a value that can be initialized with `CGFloat` and `CGFloat` value.
+
 ```swift
 import ComputableRectangle
 
-// For CGRect.
+(CGRect(x: 1, y: 1, width: 1, height: 1) + 1) == CGRect(x: 2, y: 2, width: 2, height: 2)
+(CGPoint(x: 1, y: 1) - 1) == CGPoint.zero
+(CGSize(with: 1, height: 1) * 2) == CGSize(with: 2, height: 2)
+```
 
-let baseRect = CGRect(x: 2, y: 2, width: 2, height: 2)
+### Caluculating CGPoint value
 
-baseRect + 1 // CGRect(x: 3, y: 3, width: 3, height: 3)
-baseRect - 1 // CGRect(x: 1, y: 1, width: 1, height: 1)
-baseRect * 5 // CGRect(x: 10, y: 10, width: 10, height: 10)
-baseRect / 5 // CGRect(x: 0.4, y: 0.4, width: 0.4, height: 0.4)
+It is possible to calculate CGPoint values `CGRect`, `CGPoint`.
 
-let assignPoint = CGPoint(x: 5, y: 10)
+As a result, the calculation result is applied to `x` and `y` properties.
 
-baseRect + assingPoint // CGRect(x: 7, y: 12, width: 2, height: 2)
-baseRect - assingPoint // CGRect(x: -3, y: -8, width: 2, height: 2)
-baseRect * assingPoint // CGRect(x: 10, y: 20, width: 2, height: 2)
-baseRect / assingPoint // CGRect(x: 0.4, y: 0.2, width: 2, height: 2)
+```swift
+import ComputableRectangle
 
-let assignSize = CGSize(width: 5, height: 10)
+(CGRect(x: 1, y: 1, width: 1, height: 1) + CGPoint(x: 1, y: 2)) == CGRect(x: 2, y: 2, width: 1, height: 1)
+(CGPoint(x: 1, y: 1) - CGPoint(x: 1, y: 2)) == CGPoint(x: 0, y: -1)
+```
 
-baseRect + assignSize // CGRect(x: 2, y: 2, width: 7, height: 12)
-baseRect - assignSize // CGRect(x: 2, y: 2, width: -3, height: -8)
-baseRect * assignSize // CGRect(x: 2, y: 2, width: 10, height: 20)
-baseRect / assignSize // CGRect(x: 2, y: 2, width: 0.4, height: 0.2)
+### Calculating CGSize value
 
-let assignRect = CGSize(x: 1, y: 2, width: 5, height: 10)
+It is possible to calculate CGSize values `CGRect`, `CGSize`.
 
-baseRect + assignRect // CGRect(x: 2, y: 4, width: 7, height: 12)
-baseRect - assignRect // CGRect(x: 1, y: 0, width: -3, height: -8)
-baseRect * assignRect // CGRect(x: 2, y: 4, width: 10, height: 20)
-baseRect / assignRect // CGRect(x: 2, y: 1, width: 0.4, height: 0.2)
+As a result, the calculation result is applied to `width` and `height` properties.
 
-// For CGPoint.
+```swift
+import ComputableRectangle
 
-let basePoint = CGPoint(x: 2, y: 2)
+(CGRect(x: 1, y: 1, width: 1, height: 1) + CGSize(width: 1, height: 2)) == CGRect(x: 1, y: 1, width: 2, height: 3)
+(CGSize(with: 1, height: 1) * CGSize(width: 2, height: 3)) == CGSize(with: 2, height: 3)
+```
 
-basePoint + 1 // CGPoint(x: 3, y: 3) 
-basePoint - 1 // CGPoint(x: 1, y: 1) 
-basePoint * 5 // CGPoint(x: 10, y: 10)
-basePoint / 5 // CGPoint(x: 0.4, y: 0.4)
+### Calculating on property
 
-let assignPoint = CGPoint(x: 5, y: 10)
+You can perform operations on specific properties.
 
-basePoint + assingPoint // CGPoint(x: 7, y: 12)
-basePoint - assingPoint // CGPoint(x: -3, y: -8)
-basePoint * assingPoint // CGPoint(x: 10, y: 20)
-basePoint / assingPoint // CGPoint(x: 0.4, y: 0.2)
+The value for computation must be initialized with a dedicated type.
 
-// For CGSize.
+```swift
+import ComputableRectangle
 
-let baseSize = CGSize(width: 2, height: 2)
-
-baseSize + 1 // CGSize(width: 3, height: 3) 
-baseSize - 1 // CGSize(width: 1, height: 1) 
-baseSize * 5 // CGSize(width: 10, height: 10)
-baseSize / 5 // CGSize(width: 0.4, height: 0.4)
-
-let assignSize = CGSize(width: 5, height: 10)
-
-baseSize + assignSize // CGSize(width: 7, height: 12)
-baseSize - assignSize // CGSize(width: -3, height: -8)
-baseSize * assignSize // CGSize(width: 10, height: 20)
-baseSize / assignSize // CGSize(width: 0.4, height: 0.2)
+CGRect(x: 1, y: 1, widht: 1, height: 1)
+    + OrignX(1)
+    - OriginY(2)
+    * SizeOfWidht(3)
+    / SizeOfHeight(4) // CGRect(x: 2, y: 0, widht: 3, height: 0.25)
 ```
