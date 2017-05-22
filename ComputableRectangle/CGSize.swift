@@ -1,21 +1,25 @@
 import CoreGraphics
 
-// MARK: - assign CGFloat.
+// MARK: - assign CGFloatConvertible.
 
-public func + (lhs: CGSize, rhs: CGFloat) -> CGSize {
-    return CGSize(width: lhs.width + rhs, height: lhs.height + rhs)
+public func + (lhs: CGSize, rhs: CGFloatConvertible) -> CGSize {
+    let cgfloat = rhs.CGFloatValue
+    return CGSize(width: lhs.width + cgfloat, height: lhs.height + cgfloat)
 }
 
-public func - (lhs: CGSize, rhs: CGFloat) -> CGSize {
-    return CGSize(width: lhs.width - rhs, height: lhs.height - rhs)
+public func - (lhs: CGSize, rhs: CGFloatConvertible) -> CGSize {
+    let cgfloat = rhs.CGFloatValue
+    return CGSize(width: lhs.width - cgfloat, height: lhs.height - cgfloat)
 }
 
-public func * (lhs: CGSize, rhs: CGFloat) -> CGSize {
-    return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
+public func * (lhs: CGSize, rhs: CGFloatConvertible) -> CGSize {
+    let cgfloat = rhs.CGFloatValue
+    return CGSize(width: lhs.width * cgfloat, height: lhs.height * cgfloat)
 }
 
-public func / (lhs: CGSize, rhs: CGFloat) -> CGSize {
-    return CGSize(width: lhs.width / rhs, height: lhs.height / rhs)
+public func / (lhs: CGSize, rhs: CGFloatConvertible) -> CGSize {
+    let cgfloat = rhs.CGFloatValue
+    return CGSize(width: lhs.width / cgfloat, height: lhs.height / cgfloat)
 }
 
 // MARK: - assign CGSize.
@@ -34,4 +38,40 @@ public func * (lhs: CGSize, rhs: CGSize) -> CGSize {
 
 public func / (lhs: CGSize, rhs: CGSize) -> CGSize {
     return CGSize(width: lhs.width / rhs.width, height: lhs.height / rhs.height)
+}
+
+// MARK: - point assing to `width`.
+
+public func + (lhs: CGSize, rhs: SizeOfWidth) -> CGSize {
+    return CGSize(width: lhs.width + rhs.value, height: lhs.height)
+}
+
+public func - (lhs: CGSize, rhs: SizeOfWidth) -> CGSize {
+    return CGSize(width: lhs.width - rhs.value, height: lhs.height)
+}
+
+public func * (lhs: CGSize, rhs: SizeOfWidth) -> CGSize {
+    return CGSize(width: lhs.width * rhs.value, height: lhs.height)
+}
+
+public func / (lhs: CGSize, rhs: SizeOfWidth) -> CGSize {
+    return CGSize(width: lhs.width / rhs.value, height: lhs.height)
+}
+
+// MARK: - point assing to `height`.
+
+public func + (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height + rhs.value)
+}
+
+public func - (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height - rhs.value)
+}
+
+public func * (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height * rhs.value)
+}
+
+public func / (lhs: CGSize, rhs: SizeOfHeight) -> CGSize {
+    return CGSize(width: lhs.width, height: lhs.height / rhs.value)
 }

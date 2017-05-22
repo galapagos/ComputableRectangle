@@ -53,4 +53,52 @@ final class CGPointTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToOriginX() {
+        let expect = CGPoint(x: 2, y: 1)
+        let actual = basePoint + OriginX(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToOriginX() {
+        let expect = CGPoint(x: 0, y: 1)
+        let actual = basePoint - OriginX(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToOriginX() {
+        let expect = CGPoint(x: 5, y: 1)
+        let actual = basePoint * OriginX(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToOriginX() {
+        let expect = CGPoint(x: 0.5, y: 1)
+        let actual = basePoint / OriginX(2)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_addToOriginY() {
+        let expect = CGPoint(x: 1, y: 2)
+        let actual = basePoint + OriginY(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToOriginY() {
+        let expect = CGPoint(x: 1, y: 0)
+        let actual = basePoint - OriginY(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToOriginY() {
+        let expect = CGPoint(x: 1, y: 5)
+        let actual = basePoint * OriginY(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToOriginY() {
+        let expect = CGPoint(x: 1, y: 0.5)
+        let actual = basePoint / OriginY(2)
+        XCTAssertEqual(expect, actual)
+    }
+
 }

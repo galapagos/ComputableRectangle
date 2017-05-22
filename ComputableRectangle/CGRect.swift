@@ -1,33 +1,41 @@
 import CoreGraphics
 
-// MARK: - assign CGFloat.
+// MARK: - assign CGFloatConvertible.
 
-public func + (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX + rhs,
-                  y: lhs.minY + rhs,
-                  width: lhs.width + rhs,
-                  height: lhs.height + rhs)
+public func + (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX + cgfloat,
+                  y: lhs.minY + cgfloat,
+                  width: lhs.width + cgfloat,
+                  height: lhs.height + cgfloat)
 }
 
-public func - (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX - rhs,
-                  y: lhs.minY - rhs,
-                  width: lhs.width - rhs,
-                  height: lhs.height - rhs)
+public func - (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX - cgfloat,
+                  y: lhs.minY - cgfloat,
+                  width: lhs.width - cgfloat,
+                  height: lhs.height - cgfloat)
 }
 
-public func * (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX * rhs,
-                  y: lhs.minY * rhs,
-                  width: lhs.width * rhs,
-                  height: lhs.height * rhs)
+public func * (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX * cgfloat,
+                  y: lhs.minY * cgfloat,
+                  width: lhs.width * cgfloat,
+                  height: lhs.height * cgfloat)
 }
 
-public func / (lhs: CGRect, rhs: CGFloat) -> CGRect {
-    return CGRect(x: lhs.minX / rhs,
-                  y: lhs.minY / rhs,
-                  width: lhs.width / rhs,
-                  height: lhs.height / rhs)
+public func / (lhs: CGRect, rhs: CGFloatConvertible) -> CGRect {
+    let cgfloat = rhs.CGFloatValue
+
+    return CGRect(x: lhs.minX / cgfloat,
+                  y: lhs.minY / cgfloat,
+                  width: lhs.width / cgfloat,
+                  height: lhs.height / cgfloat)
 }
 
 // MARK: - assign CGPoint.
@@ -82,4 +90,76 @@ public func * (lhs: CGRect, rhs: CGRect) -> CGRect {
 
 public func / (lhs: CGRect, rhs: CGRect) -> CGRect {
     return CGRect(origin: lhs.origin / rhs.origin, size: lhs.size / rhs.size)
+}
+
+// MARK: - point assing to `origin.x`.
+
+public func + (lhs: CGRect, rhs: OriginX) -> CGRect {
+    return CGRect(x: lhs.minX + rhs.value, y: lhs.minY, width: lhs.width, height: lhs.height)
+}
+
+public func - (lhs: CGRect, rhs: OriginX) -> CGRect {
+    return CGRect(x: lhs.minX - rhs.value, y: lhs.minY, width: lhs.width, height: lhs.height)
+}
+
+public func * (lhs: CGRect, rhs: OriginX) -> CGRect {
+    return CGRect(x: lhs.minX * rhs.value, y: lhs.minY, width: lhs.width, height: lhs.height)
+}
+
+public func / (lhs: CGRect, rhs: OriginX) -> CGRect {
+    return CGRect(x: lhs.minX / rhs.value, y: lhs.minY, width: lhs.width, height: lhs.height)
+}
+
+// MARK: - point assing to `origin.y`.
+
+public func + (lhs: CGRect, rhs: OriginY) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY + rhs.value, width: lhs.width, height: lhs.height)
+}
+
+public func - (lhs: CGRect, rhs: OriginY) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY - rhs.value, width: lhs.width, height: lhs.height)
+}
+
+public func * (lhs: CGRect, rhs: OriginY) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY * rhs.value, width: lhs.width, height: lhs.height)
+}
+
+public func / (lhs: CGRect, rhs: OriginY) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY / rhs.value, width: lhs.width, height: lhs.height)
+}
+
+// MARK: - point assing to `size.width`.
+
+public func + (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width + rhs.value, height: lhs.height)
+}
+
+public func - (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width - rhs.value, height: lhs.height)
+}
+
+public func * (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width * rhs.value, height: lhs.height)
+}
+
+public func / (lhs: CGRect, rhs: SizeOfWidth) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width / rhs.value, height: lhs.height)
+}
+
+// MARK: - point assing to `size.hegiht`.
+
+public func + (lhs: CGRect, rhs: SizeOfHeight) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width, height: lhs.height + rhs.value)
+}
+
+public func - (lhs: CGRect, rhs: SizeOfHeight) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width, height: lhs.height - rhs.value)
+}
+
+public func * (lhs: CGRect, rhs: SizeOfHeight) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width, height: lhs.height * rhs.value)
+}
+
+public func / (lhs: CGRect, rhs: SizeOfHeight) -> CGRect {
+    return CGRect(x: lhs.minX, y: lhs.minY, width: lhs.width, height: lhs.height / rhs.value)
 }

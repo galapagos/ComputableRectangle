@@ -101,4 +101,100 @@ final class CGRectTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
+    func test_addToOriginX() {
+        let expect = CGRect(x: 2, y: 1, width: 1, height: 1)
+        let actual = baseRect + OriginX(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToOriginX() {
+        let expect = CGRect(x: 0, y: 1, width: 1, height: 1)
+        let actual = baseRect - OriginX(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToOriginX() {
+        let expect = CGRect(x: 5, y: 1, width: 1, height: 1)
+        let actual = baseRect * OriginX(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToOriginX() {
+        let expect = CGRect(x: 0.5, y: 1, width: 1, height: 1)
+        let actual = baseRect / OriginX(2)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_addToOriginY() {
+        let expect = CGRect(x: 1, y: 2, width: 1, height: 1)
+        let actual = baseRect + OriginY(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToOriginY() {
+        let expect = CGRect(x: 1, y: 0, width: 1, height: 1)
+        let actual = baseRect - OriginY(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToOriginY() {
+        let expect = CGRect(x: 1, y: 5, width: 1, height: 1)
+        let actual = baseRect * OriginY(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToOriginY() {
+        let expect = CGRect(x: 1, y: 0.5, width: 1, height: 1)
+        let actual = baseRect / OriginY(2)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_addToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 2, height: 1)
+        let actual = baseRect + SizeOfWidth(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 0, height: 1)
+        let actual = baseRect - SizeOfWidth(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 5, height: 1)
+        let actual = baseRect * SizeOfWidth(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToWidth() {
+        let expect = CGRect(x: 1, y: 1, width: 0.5, height: 1)
+        let actual = baseRect / SizeOfWidth(2)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_addToHeight() {
+        let expect = CGRect(x: 1, y: 1, width: 1, height: 2)
+        let actual = baseRect + SizeOfHeight(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_subToHeight() {
+        let expect = CGRect(x: 1, y: 1, width: 1, height: 0)
+        let actual = baseRect - SizeOfHeight(1)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_mulToHeight() {
+        let expect = CGRect(x: 1, y: 1, width: 1, height: 5)
+        let actual = baseRect * SizeOfHeight(5)
+        XCTAssertEqual(expect, actual)
+    }
+
+    func test_divToHeight() {
+        let expect = CGRect(x: 1, y: 1, width: 1, height: 0.5)
+        let actual = baseRect / SizeOfHeight(2)
+        XCTAssertEqual(expect, actual)
+    }
+
 }
