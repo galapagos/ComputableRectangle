@@ -15,11 +15,12 @@ final class CGFloatConvertibleTests: XCTestCase {
         XCTAssertEqual(expect, actual)
     }
 
-    func test_convertFloat80ToCGFloat() {
-        let expect: CGFloat = 1.0
-        let actual = Float80(1.0).CGFloatValue
-        XCTAssertEqual(expect, actual)
-    }
+// TODO: Active when macOS build support.
+//    func test_convertFloat80ToCGFloat() {
+//        let expect: CGFloat = 1.0
+//        let actual = Float80(1.0).CGFloatValue
+//        XCTAssertEqual(expect, actual)
+//    }
 
     func test_convertCGFloatToCGFloat() {
         let expect: CGFloat = 1.0
