@@ -12,9 +12,10 @@ extension Double: CGFloatConvertible {
     public var CGFloatValue: CGFloat { return CGFloat(self) }
 }
 
-extension Float80: CGFloatConvertible {
-    public var CGFloatValue: CGFloat { return CGFloat(self) }
-}
+// TODO: Active when macOS build support.
+//extension Float80: CGFloatConvertible {
+//    public var CGFloatValue: CGFloat { return CGFloat(self) }
+//}
 
 extension CGFloat: CGFloatConvertible {
     public var CGFloatValue: CGFloat { return self }
